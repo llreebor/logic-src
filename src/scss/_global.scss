@@ -1,0 +1,188 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        // max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    counter-reset: slide-counter;
+    font-family: 'Gilroy';
+    &.locked {
+        overflow: hidden;
+    }
+}
+.btn {
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: inline-block;
+    transition: 0.3s background;
+    &.btn__green {
+        background: #386641;
+
+        &:hover {
+            background: lighten($color: #386641, $amount: 10);
+        }
+    }
+    &.btn__violet {
+        background: #470f4a;
+        &:hover {
+            background: lighten($color: #470f4a, $amount: 10);
+        }
+    }
+}
+.card {
+    background: #313132;
+    opacity: 0.9;
+    border-radius: 15px;
+    position: relative;
+    &__body {
+        position: relative;
+        overflow: hidden;
+        padding: 150px 35px 40px 35px;
+        @media (max-width: $breakpoint992) {
+            padding: 120px 35px 40px 35px;
+        }
+        @media (max-width: $breakpoint768) {
+            padding: 40px 20px 20px 20px;
+        }
+        &:hover {
+            &::after {
+                transform: translate(50%, -100%);
+                @media (max-width: $breakpoint768) {
+                    transform: translate(110%, -70%);
+                }
+            }
+        }
+        &:after {
+            transition: 0.3s transform;
+            position: absolute;
+            z-index: -1;
+            content: '';
+            width: 258px;
+            height: 259px;
+            background: #470f4a;
+            opacity: 0.25;
+            filter: blur(50px);
+            left: -30px;
+            bottom: -70px;
+        }
+    }
+    // .card__img
+    &__img {
+        position: absolute;
+        left: 15px;
+        top: -40px;
+        z-index: 1;
+        @media (max-width: $breakpoint768) {
+            left: 50%;
+            top: 0px;
+            transform: translate(-50%, -50%);
+        }
+        svg {
+            width: 204px;
+            height: 200px;
+            @media (max-width: $breakpoint992) {
+                width: 170px;
+            }
+            @media (max-width: $breakpoint768) {
+                height: 120px;
+                width: 120px;
+            }
+        }
+    }
+    // .card__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        color: #ffffff;
+        // margin-top: 27px;
+        @media (max-width: $breakpoint992) {
+            margin-top: 10px;
+        }
+        @media (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+    // .card__text
+    &__text {
+        font-size: 14px;
+        line-height: 30px;
+        color: #d0d0d0;
+        margin-top: 22px;
+        @media (max-width: $breakpoint992) {
+            margin-top: 15px;
+        }
+        @media (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+}
+.solutions__wrapper {
+    @media (max-width: 1300px) {
+        margin-top: -100px;
+    }
+    @media (max-width: $breakpoint992) {
+        margin-top: -150px;
+    }
+}
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0% {
+        stroke-width: 1px;
+        stroke-opacity: 1;
+        transform: scale(0.95);
+    }
+    50% {
+        stroke-width: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        stroke-width: 1px;
+        stroke-opacity: 1;
+        transform: scale(0.95);
+    }
+}
+// .path {
+//     transform-origin: 50% 50%;
+//     animation-duration: 3s;
+//     animation-name: pulse;
+//     animation-iteration-count: infinite;
+//     transition-timing-function: linear;
+// }
