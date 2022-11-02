@@ -129,45 +129,6 @@
     }
 }
 
-// ===================================== Trusted =====================================
-.section {
-    // .section__trusted
-    &__trusted {
-        padding: 94px 0;
-        @media (max-width: $breakpoint992) {
-            padding: 50px 0;
-        }
-    }
-}
-.trusted {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: $breakpoint992) {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-    }
-    // .trusted__title
-    &__title {
-        font-family: $jost;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 29px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #717a87;
-        margin-bottom: 45px;
-        span {
-            color: #470f4a;
-        }
-    }
-    // .trusted__item
-    &__item {
-    }
-}
-
 // ==================================== Superhuman ===================================
 .section {
     // .section__superhuman

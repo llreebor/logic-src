@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Jost&family=PT+Serif&family=Plus+Jakarta+Sans&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="contacts__body" id="contacts">
+    <!-- Header -->
+    @@include('./html/_header.html')
+
+    <!-- Main Page -->
+    <main class="contacts__main">
+        <!-- Section Hero -->
+        <section class="section__hero-inner contacts__hero">
+            <div class="container">
+                <div class="inner__hero">
+                    <h1 class="inner__hero-title">Contact us</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section class="section__contact">
+            <div class="container">
+                <div class="contact__title">Contact Us</div>
+                <div class="contact">
+                    <div class="contact__item">
+                        <form class="contact__form">
+                            <input type="text" class="contact__input" placeholder="Full Name" name="fullname">
+                            <input type="text" class="contact__input" placeholder="Your Email" name="email">
+                            <input type="text" class="contact__input" placeholder="Company" name="company">
+                            <input type="text" class="contact__input" placeholder="Phone" name="phone">
+                            <input type="text" class="contact__input" placeholder="How can we help?" name="help">
+                            <button type="submit" class="btn btn__green contact__btn">Contact Us</button>
+                        </form>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__info">
+                            <div class="contact__title">Need to Reach Us?</div>
+                            <div class="contact__text">Fill out the form to contact us now or find our branch
+                                addresses and phone numbers below.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Adress -->
+        @@include('./html/_adress.html')
+        <!-- Section Subscribee -->
+        @@include('./html/_subscribe.html')
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

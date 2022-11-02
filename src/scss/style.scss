@@ -5,15 +5,25 @@
 @import './global';
 
 // Sections or Pages SCSS-files imports
-// Home
+// Global Sections
 @import './header';
-@import './home';
 @import './subscribe';
+@import './trusted';
 @import './solutions';
+@import './adress';
 @import './footer';
 
+// Home
+@import './home';
+
 // Info
-@import './_info';
+@import './info';
+
+// Company
+@import './company';
+
+// Contacts
+@import './contacts';
 
 // Libs
 @import './libs/swiper';

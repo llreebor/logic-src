@@ -1,0 +1,114 @@
+// ====================================== Hero ======================================
+.section {
+    // .section__hero-inner
+    &__hero-inner {
+        // .contacts__hero
+        &.contacts__hero {
+            padding: 130px 0;
+            background: url('../img/contacts/hero.jpg') center / cover no-repeat;
+
+            .inner {
+                // .inner__hero-title
+                &__hero-title {
+                }
+            }
+        }
+    }
+}
+
+// ===================================== Contact =====================================
+.section {
+    // .section__contact
+    &__contact {
+        padding: 30px 0;
+    }
+}
+.contact {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+        gap: 50px;
+    }
+    @media (max-width: $breakpoint768) {
+        flex-wrap: wrap-reverse;
+        margin-top: 30px;
+        gap: 20px;
+    }
+    // .contact__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: #470f4a;
+    }
+    // .contact__item
+    &__item {
+        flex: 0 1 600px;
+        margin-top: 60px;
+        @media (max-width: $breakpoint768) {
+            flex: 0 1 100%;
+            margin-top: 0;
+        }
+    }
+    // .contact__form
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    // .contact__input
+    &__input {
+        background: #ffffff;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.85;
+        font-weight: 500;
+        transition: 0.3s border;
+        border: 1px solid transparent;
+        outline: none;
+        &::placeholder {
+            font-weight: 500;
+            color: #000000;
+            opacity: 0.85;
+        }
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+
+        &:focus {
+            border: 1px solid #470f4a;
+        }
+    }
+    // .contact__btn
+    &__btn {
+        margin-top: 30px;
+        max-width: fit-content;
+        @media (max-width: $breakpoint768) {
+            max-width: 100%;
+        }
+    }
+    // .contact__info
+    &__info {
+        background: #ffffff;
+        box-shadow: 4px 4px 80px 1px rgba(71, 15, 74, 0.13);
+        padding: 18px 15px 165px 15px;
+        @media (max-width: $breakpoint768) {
+            padding: 30px 20px;
+            text-align: center;
+        }
+    }
+    // .contact__text
+    &__text {
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        font-weight: 500;
+        margin-top: 18px;
+    }
+}

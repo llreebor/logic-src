@@ -1,0 +1,98 @@
+.section {
+    // .section__adress
+    &__adress {
+        padding: 30px 0;
+    }
+}
+.adress {
+    display: flex;
+    gap: 30px;
+    @media (max-width: $breakpoint992) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media (max-width: $breakpoint768) {
+        gap: 10px;
+    }
+    // .adress__item
+    &__item {
+        background: #252525;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        display: flex;
+        flex: 0 1 395px;
+        gap: 22px;
+        padding: 30px;
+        position: relative;
+        @media (max-width: $breakpoint768) {
+            flex-direction: column;
+            padding: 20px 15px;
+            gap: 10px;
+        }
+        .adress__circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &:nth-child(1) {
+            @media (max-width: $breakpoint992) {
+                order: 1;
+                flex: 1 1 250px;
+            }
+        }
+        &:nth-child(2) {
+            flex: 0 1 540px;
+            @media (max-width: $breakpoint992) {
+                order: 3;
+                flex: 1 1 100%;
+            }
+            @media (max-width: $breakpoint768) {
+                padding: 20px 15px;
+            }
+        }
+        &:nth-child(3) {
+            @media (max-width: $breakpoint992) {
+                order: 2;
+                flex: 1 1 250px;
+            }
+        }
+    }
+    // .adress__icon
+    &__icon {
+        svg {
+            margin-top: -5px;
+        }
+    }
+    // .adress__list
+    &__list {
+        flex: 0 1 180px;
+        @media (max-width: $breakpoint768) {
+            flex: 0 1 auto;
+        }
+        &.second__list {
+            margin-left: auto;
+            @media (max-width: $breakpoint992) {
+                margin-left: 50px;
+            }
+            @media (max-width: $breakpoint768) {
+                margin-left: 0;
+            }
+        }
+    }
+    // .adress__country
+    &__country {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+    }
+    // .adress__info
+    &__info {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+}

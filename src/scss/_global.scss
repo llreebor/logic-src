@@ -179,10 +179,10 @@ body {
         transform: scale(0.95);
     }
 }
-// .path {
-//     transform-origin: 50% 50%;
-//     animation-duration: 3s;
-//     animation-name: pulse;
-//     animation-iteration-count: infinite;
-//     transition-timing-function: linear;
-// }
+.path {
+    transform-origin: 50% 50%;
+    animation-duration: 3s;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
