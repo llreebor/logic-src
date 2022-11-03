@@ -1,7 +1,7 @@
 const getTemplate = (data = [], placeholder, selectedId) => {
     let text = placeholder ?? 'placeholder не указан'
 
-    const items = data.map(item => {
+    const items = data.map((item) => {
         let cls = ''
         if (item.id === selectedId) {
             text = item.value
@@ -54,7 +54,7 @@ class Select {
         } else if (type === 'item') {
             const id = event.target.dataset.id
             this.select(id)
-        }  else if (type === 'backdrop') {
+        } else if (type === 'backdrop') {
             this.close()
         }
     }
@@ -64,14 +64,16 @@ class Select {
     }
 
     get current() {
-        return this.options.data.find(item => item.id === this.selectedId)
+        return this.options.data.find((item) => item.id === this.selectedId)
     }
 
     select(id) {
         this.selectedId = id
         this.$value.textContent = this.current.value
 
-        this.$el.querySelectorAll(`[data-type="item"]`).forEach( el => el.classList.remove('selected'))
+        this.$el
+            .querySelectorAll(`[data-type="item"]`)
+            .forEach((el) => el.classList.remove('selected'))
         this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected')
 
         this.options.onSelect ? this.options.onSelect(this.current) : null
@@ -98,24 +100,19 @@ class Select {
     }
 }
 
-
 // Инициализация плагина
 const select = new Select('#select', {
     placeholder: 'Выберите элемент',
     selectedId: '1',
     data: [
-        {id: '1', value: 'Элемент списка 1'},
-        {id: '2', value: 'Элемент списка 2'},
-        {id: '3', value: 'Элемент списка 3'},
-        {id: '4', value: 'Элемент списка 4'},
-        {id: '5', value: 'Элемент списка 5'},
+        { id: '1', value: 'Элемент списка 1' },
+        { id: '2', value: 'Элемент списка 2' },
+        { id: '3', value: 'Элемент списка 3' },
+        { id: '4', value: 'Элемент списка 4' },
+        { id: '5', value: 'Элемент списка 5' },
     ],
     onSelect(item) {
         const input = document.querySelector('.hidden__input')
         input.value = item.value
-    } 
+    },
 })
-
-
-
-

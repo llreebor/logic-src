@@ -10,6 +10,7 @@
 @import './subscribe';
 @import './trusted';
 @import './solutions';
+@import './description';
 @import './adress';
 @import './footer';
 
@@ -24,6 +25,15 @@
 
 // Contacts
 @import './contacts';
+
+// Why
+@import './why';
+
+// About
+@import './about';
+
+// Demo
+@import './demo';
 
 // Libs
 @import './libs/swiper';

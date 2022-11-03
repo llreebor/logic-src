@@ -63,6 +63,9 @@ body {
     &__body {
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         padding: 150px 35px 40px 35px;
         @media (max-width: $breakpoint992) {
             padding: 120px 35px 40px 35px;
@@ -136,6 +139,7 @@ body {
         line-height: 30px;
         color: #d0d0d0;
         margin-top: 22px;
+        display: flex;
         @media (max-width: $breakpoint992) {
             margin-top: 15px;
         }

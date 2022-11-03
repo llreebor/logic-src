@@ -1,0 +1,217 @@
+// ====================================== Hero ======================================
+.section {
+    // .section__hero-inner
+    &__hero-inner {
+        &.about {
+            // .about__hero
+            &__hero {
+                background: url('../img/about/hero.jpg') center / cover
+                    no-repeat;
+                padding: 100px 0;
+                @media (max-width: $breakpoint768) {
+                    padding: 50px 0;
+                }
+            }
+        }
+    }
+}
+.inner {
+    // .inner__hero-subtitle
+    &__hero-subtitle {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #ffffff;
+        opacity: 0.85;
+        margin-bottom: 15px;
+    }
+}
+
+// ====================================== Story =====================================
+.section {
+    // .section__story
+    &__story {
+    }
+}
+.story {
+    background: #470f4a;
+    border-radius: 8px;
+    // .story__title
+    &__title {
+        font-size: 42px;
+        line-height: 49px;
+        font-weight: 500;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 35px 0;
+        text-align: center;
+        background: #470f4a;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        @media (max-width: $breakpoint768) {
+            padding: 25px 0;
+            font-size: 38px;
+        }
+    }
+    // .story__text
+    &__text {
+        padding: 30px 20px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        opacity: 0.85;
+        font-weight: 500;
+        text-align: center;
+        @media (max-width: $breakpoint768) {
+            padding: 20px;
+        }
+    }
+    // .story__list
+    &__list {
+        margin: 10px auto 10px auto;
+        max-width: 640px;
+        padding: 0 20px;
+        li {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 500;
+            color: #ffffff;
+            opacity: 0.85;
+            padding: 2px 0;
+            position: relative;
+            padding-left: 18px;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 7px;
+                width: 8px;
+                height: 9px;
+                background: white;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+.story__link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+}
+.story__link {
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #000000;
+    opacity: 0.85;
+    font-weight: 500;
+
+    span {
+        color: #470f4a;
+        text-decoration-line: underline;
+    }
+}
+
+// ====================================== Awards ====================================
+.section {
+    // .section__awards
+    &__awards {
+        padding-top: 100px;
+        padding-bottom: 130px;
+        @media (max-width: $breakpoint992) {
+            padding: 75px 0;
+        }
+        @media (max-width: $breakpoint768) {
+            padding: 50px 0;
+        }
+    }
+}
+.awards {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $breakpoint992) {
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+    // .awards__title
+    &__title {
+        font-size: 42px;
+        line-height: 49px;
+        color: #000000;
+        font-weight: 500;
+        text-align: center;
+        @media (max-width: $breakpoint768) {
+            font-size: 38px;
+        }
+    }
+    // .awards__wrapper
+    &__wrapper {
+        background: #ffffff;
+        box-shadow: 4px 4px 80px 1px rgba(71, 15, 74, 0.13);
+        padding: 100px 30px;
+        margin-top: 60px;
+        @media (max-width: $breakpoint992) {
+            margin-top: 30px;
+            padding: 50px 25px;
+        }
+        @media (max-width: $breakpoint480) {
+            padding: 15px;
+        }
+    }
+    // .awards__item
+    &__item {
+        padding: 70px 30px;
+        flex: 0 1 32.5%;
+        background: #ffffff;
+        box-shadow: 4px 4px 80px 1px rgba(71, 15, 74, 0.13);
+        @media (max-width: $breakpoint992) {
+            &:nth-child(1) {
+                flex: 0 1 49%;
+                @media (max-width: $breakpoint768) {
+                    flex: 0 1 100%;
+                }
+            }
+            &:nth-child(2) {
+                flex: 0 1 49%;
+                @media (max-width: $breakpoint768) {
+                    flex: 0 1 100%;
+                }
+            }
+            &:nth-child(3) {
+                flex: 0 1 100%;
+            }
+        }
+        @media (max-width: $breakpoint768) {
+            padding: 30px;
+        }
+        @media (max-width: $breakpoint480) {
+            padding: 15px;
+        }
+    }
+    // .awards__text
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #470f4a;
+        opacity: 0.85;
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+    // .awards__name
+    &__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: #470f4a;
+        opacity: 0.85;
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+}
